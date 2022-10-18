@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>movies</ion-title>
+  <ion-toolbar color="medium">
+    <ion-title color="light">movies</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item button *ngFor="let item of movies" [routerLink]="[item.id]">
+    <ion-item color="light" button *ngFor="let item of movies" [routerLink]="[item.id]">
       <ion-avatar slot="start">
         <img [src]="imageBaseUrl + '/w92' + item.poster_path" />
 
@@ -16,7 +16,7 @@
         <p> {{ item.release_date | date:'y'}} </p>
       </ion-label>
 
-      <ion-badge slot="end"> {{ item.vote_average }} </ion-badge>
+      <ion-badge color="secondary" slot="end"> {{ item.vote_average }} </ion-badge>
     </ion-item>
   </ion-list>
 
